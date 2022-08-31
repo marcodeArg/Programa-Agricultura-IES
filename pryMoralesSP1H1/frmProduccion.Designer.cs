@@ -36,27 +36,31 @@
             this.lblNombreCulPro = new System.Windows.Forms.Label();
             this.lblTituloLoc = new System.Windows.Forms.Label();
             this.lblNombreLocPro = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // cboNombreCulPro
             // 
+            this.cboNombreCulPro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboNombreCulPro.FormattingEnabled = true;
-            this.cboNombreCulPro.Location = new System.Drawing.Point(205, 116);
+            this.cboNombreCulPro.Location = new System.Drawing.Point(205, 150);
             this.cboNombreCulPro.Name = "cboNombreCulPro";
             this.cboNombreCulPro.Size = new System.Drawing.Size(152, 28);
             this.cboNombreCulPro.TabIndex = 28;
             // 
             // cboNombreLocPro
             // 
+            this.cboNombreLocPro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboNombreLocPro.FormattingEnabled = true;
-            this.cboNombreLocPro.Location = new System.Drawing.Point(205, 70);
+            this.cboNombreLocPro.Location = new System.Drawing.Point(205, 104);
             this.cboNombreLocPro.Name = "cboNombreLocPro";
             this.cboNombreLocPro.Size = new System.Drawing.Size(152, 28);
             this.cboNombreLocPro.TabIndex = 27;
             // 
             // mskToneladaPro
             // 
-            this.mskToneladaPro.Location = new System.Drawing.Point(205, 159);
+            this.mskToneladaPro.Location = new System.Drawing.Point(205, 193);
             this.mskToneladaPro.Mask = "99999";
             this.mskToneladaPro.Name = "mskToneladaPro";
             this.mskToneladaPro.Size = new System.Drawing.Size(97, 26);
@@ -65,7 +69,7 @@
             // 
             // btnCargarPro
             // 
-            this.btnCargarPro.Location = new System.Drawing.Point(282, 203);
+            this.btnCargarPro.Location = new System.Drawing.Point(282, 237);
             this.btnCargarPro.Name = "btnCargarPro";
             this.btnCargarPro.Size = new System.Drawing.Size(75, 30);
             this.btnCargarPro.TabIndex = 25;
@@ -76,7 +80,7 @@
             // lblToneladas
             // 
             this.lblToneladas.AutoSize = true;
-            this.lblToneladas.Location = new System.Drawing.Point(21, 162);
+            this.lblToneladas.Location = new System.Drawing.Point(21, 196);
             this.lblToneladas.Name = "lblToneladas";
             this.lblToneladas.Size = new System.Drawing.Size(170, 20);
             this.lblToneladas.TabIndex = 24;
@@ -85,7 +89,7 @@
             // lblNombreCulPro
             // 
             this.lblNombreCulPro.AutoSize = true;
-            this.lblNombreCulPro.Location = new System.Drawing.Point(21, 119);
+            this.lblNombreCulPro.Location = new System.Drawing.Point(21, 153);
             this.lblNombreCulPro.Name = "lblNombreCulPro";
             this.lblNombreCulPro.Size = new System.Drawing.Size(142, 20);
             this.lblNombreCulPro.TabIndex = 23;
@@ -104,17 +108,36 @@
             // lblNombreLocPro
             // 
             this.lblNombreLocPro.AutoSize = true;
-            this.lblNombreLocPro.Location = new System.Drawing.Point(21, 73);
+            this.lblNombreLocPro.Location = new System.Drawing.Point(21, 107);
             this.lblNombreLocPro.Name = "lblNombreLocPro";
             this.lblNombreLocPro.Size = new System.Drawing.Size(163, 20);
             this.lblNombreLocPro.TabIndex = 21;
             this.lblNombreLocPro.Text = "Nombre de Localidad:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 20);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Fecha:";
+            // 
+            // dtFecha
+            // 
+            this.dtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dtFecha.Location = new System.Drawing.Point(99, 65);
+            this.dtFecha.Name = "dtFecha";
+            this.dtFecha.Size = new System.Drawing.Size(258, 23);
+            this.dtFecha.TabIndex = 30;
+            // 
             // frmProduccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 253);
+            this.ClientSize = new System.Drawing.Size(382, 324);
+            this.Controls.Add(this.dtFecha);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cboNombreCulPro);
             this.Controls.Add(this.cboNombreLocPro);
             this.Controls.Add(this.mskToneladaPro);
@@ -143,5 +166,7 @@
         private System.Windows.Forms.Label lblNombreCulPro;
         private System.Windows.Forms.Label lblTituloLoc;
         private System.Windows.Forms.Label lblNombreLocPro;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dtFecha;
     }
 }

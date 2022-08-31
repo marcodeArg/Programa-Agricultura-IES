@@ -18,32 +18,50 @@ namespace pryMoralesSP1H1
             InitializeComponent();
         }
 
-        private void btnCargarPro_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmProduccion_Load(object sender, EventArgs e)
         {
             StreamReader srCultivos = new StreamReader("cultivos.txt");
             StreamReader srLocalidades = new StreamReader("localidades.txt");
 
+            char varSeparador = Convert.ToChar(",");
+
             while(!srCultivos.EndOfStream)
             {
-                cboNombreCulPro.Items.Add(srCultivos.ReadLine());
+                string[] nombreCul = srCultivos.ReadLine().Split(varSeparador);
+
+                cboNombreCulPro.Items.Add(nombreCul[1]);
             }
             
-            srLocalidades.Close();
+            srCultivos.Close();
 
             while (!srLocalidades.EndOfStream)
             {
-                cboNombreLocPro.Items.Add(srLocalidades.ReadLine());
+                string[] nombreLoc = srLocalidades.ReadLine().Split(varSeparador);
+
+                cboNombreLocPro.Items.Add(nombreLoc[1]);
             }
 
-            srCultivos.Close();
+            srLocalidades.Close();
+        }
 
-            
+        private void btnCargarPro_Click(object sender, EventArgs e)
+        {
+            StreamWriter swProduccion = new StreamWriter("produccion.txt", true);
 
+            DateTime varFecha = dtFecha.Value.Date;
+            string varNombreLoc = cboNombreLocPro.Text;
+            string varNombreCul = cboNombreCulPro.Text;
+            string varTonelada = mskToneladaPro.Text;
+            string varMensaje = "Fecha: " + varFecha + " | Nombre de Localidad: " + varNombreLoc + " | Nombre de Cultivo: " + varNombreCul + " | Cantidad de toneladas: " + varTonelada;
+
+            mskToneladaPro.Clear();
+
+            cboNombreCulPro.Focus();
+
+
+            swProduccion.WriteLine(varMensaje);
+
+            swProduccion.Close();
         }
     }
 }

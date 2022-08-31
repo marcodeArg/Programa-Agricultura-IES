@@ -24,7 +24,7 @@ namespace pryMoralesSP1H1
             string varNombreLoc = txtNombreLoc.Text;
 
             StreamWriter miSW = new StreamWriter("localidades.txt", true);
-            miSW.WriteLine("ID de Localidad: " + varIDLoc + " | Nombre de Localidad: " + varNombreLoc);
+            miSW.WriteLine(varIDLoc + "," + varNombreLoc);
             miSW.Close();
 
             mskIDLoc.Clear();

@@ -24,7 +24,7 @@ namespace pryMoralesSP1H1
             string varNombreCul = txtNombreCul.Text;
 
             StreamWriter miSW = new StreamWriter("cultivos.txt", true);
-            miSW.WriteLine("ID de Cultivo: " + varIDCul + " | Nombre de Cultivo: " + varNombreCul);
+            miSW.WriteLine(varIDCul + "," + varNombreCul);
             miSW.Close();
 
             mskIDCul.Clear();
