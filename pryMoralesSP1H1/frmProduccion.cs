@@ -52,7 +52,7 @@ namespace pryMoralesSP1H1
             string varNombreLoc = cboNombreLocPro.Text;
             string varNombreCul = cboNombreCulPro.Text;
             string varTonelada = mskToneladaPro.Text;
-            string varMensaje = "Fecha: " + varFecha + " | Nombre de Localidad: " + varNombreLoc + " | Nombre de Cultivo: " + varNombreCul + " | Cantidad de toneladas: " + varTonelada;
+            string varMensaje =  varFecha + "," + varNombreLoc + "," + varNombreCul + "," + varTonelada;
 
             mskToneladaPro.Clear();
 
