@@ -20,27 +20,37 @@ namespace pryMoralesSP1H1
 
         private void frmConsulta_Load(object sender, EventArgs e)
         {
-            char varSeparador = Convert.ToChar(",");
-            int columna = 0;
 
-            StreamReader srProduccion = new StreamReader("produccion.txt");
-
-            while (!srProduccion.EndOfStream)
+            if (File.Exists("produccion.txt"))
             {
-                dgvConsulta.Rows.Add();
+                char varSeparador = Convert.ToChar(",");
+                int columna = 0;
 
-                string[] vecProduccion = srProduccion.ReadLine().Split(varSeparador);
+                StreamReader srProduccion = new StreamReader("produccion.txt");
 
-                    
-                dgvConsulta.Rows[columna].Cells[0].Value = vecProduccion[1];
-                dgvConsulta.Rows[columna].Cells[1].Value = vecProduccion[2];
-                dgvConsulta.Rows[columna].Cells[2].Value = vecProduccion[3];
-        
-                
-                columna++;
+                while (!srProduccion.EndOfStream)
+                {
+                    dgvConsulta.Rows.Add();
+
+                    string[] vecProduccion = srProduccion.ReadLine().Split(varSeparador);
+
+
+                    dgvConsulta.Rows[columna].Cells[0].Value = vecProduccion[1];
+                    dgvConsulta.Rows[columna].Cells[1].Value = vecProduccion[2];
+                    dgvConsulta.Rows[columna].Cells[2].Value = vecProduccion[3];
+
+
+
+                    columna++;
+                }
+
+                srProduccion.Close();
             }
-            
-            srProduccion.Close();
+            else
+            {
+                MessageBox.Show("Error, debe registrar los datos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvConsulta = new System.Windows.Forms.DataGridView();
             this.Cultivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Localidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,8 +54,8 @@
             // Cultivo
             // 
             this.Cultivo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            this.Cultivo.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.Cultivo.DefaultCellStyle = dataGridViewCellStyle1;
             this.Cultivo.HeaderText = "Cultivo";
             this.Cultivo.Name = "Cultivo";
             this.Cultivo.ReadOnly = true;
