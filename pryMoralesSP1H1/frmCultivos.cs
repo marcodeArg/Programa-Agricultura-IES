@@ -20,24 +20,20 @@ namespace pryMoralesSP1H1
 
         private void btnCargarCul_Click(object sender, EventArgs e)
         {
+
             string varIDCul = mskIDCul.Text;
             string varNombreCul = txtNombreCul.Text;
             bool varBandera = false;
-
+            char varSeparador = Convert.ToChar(",");
 
             //Crear el arhivo si todavia no existe
             StreamWriter swArchivoCul = new StreamWriter("cultivos.txt", true);
             swArchivoCul.Close();
 
-
-
             StreamReader srCultivos = new StreamReader("cultivos.txt");
 
-            char varSeparador = Convert.ToChar(",");
-            
-
             //Validar si el archivo tiene algo
-            while (!srCultivos.EndOfStream)
+            while (!srCultivos.EndOfStream && !varBandera)
             {
                 string[] nombreCul = srCultivos.ReadLine().Split(varSeparador);
 
@@ -72,8 +68,6 @@ namespace pryMoralesSP1H1
 
                 mskIDCul.Focus();
             }
-           
-
         }
     }
 }

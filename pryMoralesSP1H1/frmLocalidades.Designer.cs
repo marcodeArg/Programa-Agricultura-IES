@@ -69,14 +69,14 @@
             this.txtNombreLoc.Location = new System.Drawing.Point(200, 116);
             this.txtNombreLoc.Name = "txtNombreLoc";
             this.txtNombreLoc.Size = new System.Drawing.Size(152, 26);
-            this.txtNombreLoc.TabIndex = 7;
+            this.txtNombreLoc.TabIndex = 2;
             // 
             // btnCargarLoc
             // 
             this.btnCargarLoc.Location = new System.Drawing.Point(277, 161);
             this.btnCargarLoc.Name = "btnCargarLoc";
             this.btnCargarLoc.Size = new System.Drawing.Size(75, 30);
-            this.btnCargarLoc.TabIndex = 8;
+            this.btnCargarLoc.TabIndex = 3;
             this.btnCargarLoc.Text = "Cargar";
             this.btnCargarLoc.UseVisualStyleBackColor = true;
             this.btnCargarLoc.Click += new System.EventHandler(this.btnCargarLoc_Click);

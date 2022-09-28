@@ -24,21 +24,17 @@ namespace pryMoralesSP1H1
             string varIDLoc = mskIDLoc.Text;
             string varNombreLoc = txtNombreLoc.Text;
             bool varBandera = false;
-
+            char varSeparador = Convert.ToChar(",");
 
             //Crear el arhivo si todavia no existe
             StreamWriter swArchivoLoc = new StreamWriter("localidades.txt", true);
             swArchivoLoc.Close();
 
 
-
             StreamReader srLocalidades = new StreamReader("localidades.txt");
 
-            char varSeparador = Convert.ToChar(",");
-
-
             //Validar si el archivo tiene algo
-            while (!srLocalidades.EndOfStream)
+            while (!srLocalidades.EndOfStream && !varBandera)
             {
                 string[] nombreLoc = srLocalidades.ReadLine().Split(varSeparador);
 

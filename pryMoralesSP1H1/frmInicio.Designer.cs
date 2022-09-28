@@ -64,29 +64,30 @@
             // localidadesToolStripMenuItem
             // 
             this.localidadesToolStripMenuItem.Name = "localidadesToolStripMenuItem";
-            this.localidadesToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
+            this.localidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.localidadesToolStripMenuItem.Text = "Localidades";
             this.localidadesToolStripMenuItem.Click += new System.EventHandler(this.localidadesToolStripMenuItem_Click);
             // 
             // cultivosToolStripMenuItem
             // 
             this.cultivosToolStripMenuItem.Name = "cultivosToolStripMenuItem";
-            this.cultivosToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
+            this.cultivosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.cultivosToolStripMenuItem.Text = "Cultivos";
             this.cultivosToolStripMenuItem.Click += new System.EventHandler(this.cultivosToolStripMenuItem_Click);
             // 
             // producciónToolStripMenuItem
             // 
             this.producciónToolStripMenuItem.Name = "producciónToolStripMenuItem";
-            this.producciónToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
+            this.producciónToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.producciónToolStripMenuItem.Text = "Producción";
             this.producciónToolStripMenuItem.Click += new System.EventHandler(this.producciónToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // consultaToolStripMenuItem
             // 

@@ -18,28 +18,29 @@ namespace pryMoralesSP1H1
             InitializeComponent();
         }
 
-        private void dgvConsulta_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void frmConsulta_Load(object sender, EventArgs e)
         {
-            StreamReader srProduccion = new StreamReader("produccion.txt");
-
             char varSeparador = Convert.ToChar(",");
-            string[] vecProduccion = srProduccion.ReadToEnd().Split(varSeparador);
-            string varLocalidad = vecProduccion[1];
-            string varCultivo = vecProduccion[2];
-            string varTonelada = vecProduccion[3];
+            int columna = 0;
 
+            StreamReader srProduccion = new StreamReader("produccion.txt");
 
             while (!srProduccion.EndOfStream)
             {
+                dgvConsulta.Rows.Add();
+
+                string[] vecProduccion = srProduccion.ReadLine().Split(varSeparador);
+
+                    
+                dgvConsulta.Rows[columna].Cells[0].Value = vecProduccion[1];
+                dgvConsulta.Rows[columna].Cells[1].Value = vecProduccion[2];
+                dgvConsulta.Rows[columna].Cells[2].Value = vecProduccion[3];
+        
                 
-                dgvConsulta.Rows.Add(varLocalidad);
-                
+                columna++;
             }
+            
+            srProduccion.Close();
         }
     }
 }

@@ -37,10 +37,13 @@ namespace pryMoralesSP1H1
 
         private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Acceso denegado!", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            
-            //frmConsulta fConsulta = new frmConsulta();
-            //fConsulta.ShowDialog();
+            frmConsulta fConsulta = new frmConsulta();
+            fConsulta.ShowDialog();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

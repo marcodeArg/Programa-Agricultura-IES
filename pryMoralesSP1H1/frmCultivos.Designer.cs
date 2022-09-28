@@ -41,7 +41,7 @@
             this.txtNombreCul.Location = new System.Drawing.Point(198, 116);
             this.txtNombreCul.Name = "txtNombreCul";
             this.txtNombreCul.Size = new System.Drawing.Size(152, 26);
-            this.txtNombreCul.TabIndex = 12;
+            this.txtNombreCul.TabIndex = 2;
             // 
             // lblTituloCul
             // 
@@ -76,7 +76,7 @@
             this.btnCargarCul.Location = new System.Drawing.Point(275, 160);
             this.btnCargarCul.Name = "btnCargarCul";
             this.btnCargarCul.Size = new System.Drawing.Size(75, 30);
-            this.btnCargarCul.TabIndex = 13;
+            this.btnCargarCul.TabIndex = 3;
             this.btnCargarCul.Text = "Cargar";
             this.btnCargarCul.UseVisualStyleBackColor = true;
             this.btnCargarCul.Click += new System.EventHandler(this.btnCargarCul_Click);
@@ -87,7 +87,7 @@
             this.mskIDCul.Mask = "99999";
             this.mskIDCul.Name = "mskIDCul";
             this.mskIDCul.Size = new System.Drawing.Size(97, 26);
-            this.mskIDCul.TabIndex = 14;
+            this.mskIDCul.TabIndex = 1;
             this.mskIDCul.ValidatingType = typeof(int);
             // 
             // frmCultivos
